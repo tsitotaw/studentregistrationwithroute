@@ -6,12 +6,18 @@ import MainRoute from './components/route/MainRoute';
 import { Link } from 'react-router-dom';
 
 function App() {
+
+  const onLogoutHandler = (event) => {
+    localStorage.removeItem("IsLoggedIn");
+    window.location.href = '/';
+  };
+
   return (
     <>
       <Navbar bg="light" expand="lg">
         <Container>
           <Navbar.Brand href="#">
-            <img src={logo} alt="Student Registration" height="100px;" />
+            <img src={logo} alt="Student Registration" height="100px;" /> Student App
           </Navbar.Brand>
           <div class="flex-container"> 
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -19,11 +25,11 @@ function App() {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
               <Link className="nav-link" to="/" > Home </Link> 
-              <Link className="nav-link" to="/login" > Login </Link> 
+              <Nav.Link href="" onClick={onLogoutHandler}>Logout</Nav.Link>
               <NavDropdown title="Student" id="basic-nav-dropdown">
                 <Link className="nav-link" to="/students/create" > Create Student </Link>  
                 <Link className="nav-link" to="/students" > Student List </Link>  
-                <Link className="nav-link" to="/students/edit/:id" > Student Overview </Link>                    
+                <Link className="nav-link" to="/students/edit" > Student Overview </Link>                    
               </NavDropdown>
             </Nav>
           </Navbar.Collapse>
