@@ -27,10 +27,9 @@ const MainRoute = () => {
         {isLoggedIn && 
             <div className="content">
                 <Routes>
-                    <Route path="/" element={ <Home />} />
-                    <Route path="/students/create" element={ <AddStudent />} />
-                    <Route path="/students" element={ <ListStudent />} />
-                    <Route path="/students/edit" element={<EditStudent />} />
+                    <Route path="/" element={ <ListStudent />} />
+                    <Route path="/students/create" element={ <AddStudent />} />                    
+                    <Route path="/students/edit/:id" element={<EditStudent />} />
                 </Routes>
             </div>
         }

@@ -24,12 +24,10 @@ function App() {
           
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Link className="nav-link" to="/" > Home </Link> 
-              <Nav.Link href="" onClick={onLogoutHandler}>Logout</Nav.Link>
-              <NavDropdown title="Student" id="basic-nav-dropdown">
-                <Link className="nav-link" to="/students/create" > Create Student </Link>  
-                <Link className="nav-link" to="/students" > Student List </Link>  
-                <Link className="nav-link" to="/students/edit" > Student Overview </Link>                    
+              <Link className="nav-link" to="/" > Student List </Link> 
+              <Link className="nav-link" to="/students/create" > Create Student </Link>   
+              <NavDropdown title="Logout" id="basic-nav-dropdown">
+                <Nav.Link href="" onClick={onLogoutHandler}>Logout</Nav.Link>                   
               </NavDropdown>
             </Nav>
           </Navbar.Collapse>

@@ -44,7 +44,7 @@ const MyLogin = props => {
                 </Form.Group>
 
                 {loginFailed && 
-                    <p><Form.Label className="error__message">Invalid Login</Form.Label></p>
+                    <p><Form.Label className="error__message">The Username and Password entered are invalid. Ask Support for detail</Form.Label></p>
                 }
                 <Button variant="primary" type="button" onClick={loginHandler}>
                     Submit
